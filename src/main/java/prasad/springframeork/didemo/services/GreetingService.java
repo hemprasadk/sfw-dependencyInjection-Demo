@@ -1,6 +1,6 @@
 package prasad.springframeork.didemo.services;
 
-public interface GreeetingService {
+public interface GreetingService {
 
     String sayhello();
 

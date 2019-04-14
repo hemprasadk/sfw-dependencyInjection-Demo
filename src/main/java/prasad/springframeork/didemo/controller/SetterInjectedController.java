@@ -1,21 +1,23 @@
 package prasad.springframeork.didemo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import prasad.springframeork.didemo.services.GreeetingService;
+import prasad.springframeork.didemo.services.GreetingService;
 
 @Controller
 public class SetterInjectedController {
 
 
-    private GreeetingService greeetingService;
+    private GreetingService greeetingService;
 
     public String sayhello()
     {
         return greeetingService.sayhello();
     }
     @Autowired
-    public void setGreeetingService(GreeetingService greeetingService) {
+    @Qualifier("getterGreetingService")
+    public void setGreeetingService(GreetingService greeetingService) {
         this.greeetingService = greeetingService;
     }
 

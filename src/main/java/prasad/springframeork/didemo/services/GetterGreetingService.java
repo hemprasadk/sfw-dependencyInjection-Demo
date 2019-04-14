@@ -3,11 +3,9 @@ package prasad.springframeork.didemo.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
-
-    public static final String hello= "HELLO WORLD";
+public class GetterGreetingService  implements GreetingService{
     @Override
     public String sayhello() {
-        return hello;
+        return "Hello- I was injected by getter";
     }
 }
