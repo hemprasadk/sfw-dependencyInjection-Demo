@@ -1,0 +1,5 @@
+prasad:
+    jms:
+      username: TEST
+      password: pasawordk
+      dburl: test

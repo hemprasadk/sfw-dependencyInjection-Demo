@@ -4,13 +4,18 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Service
-@Profile("es")
-@Primary
 public class PrimaryGreetingspanishService implements GreetingService {
+
+    GreetingRepository greetingRepository;
+
+    public PrimaryGreetingspanishService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
+
+
 
     @Override
     public String sayhello() {
-        return "Hello- From the primar greeting spanish service";
+        return greetingRepository.getSpanishGreeting();
     }
 }
