@@ -3,3 +3,12 @@ prasad:
       username: TEST
       password: pasawordk
       dburl: test
+
+
+---
+spring:
+  profiles: de
+prasad:
+  jms:
+    username: TEST****** German
+
